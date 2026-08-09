@@ -36,3 +36,24 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+  terraform-plan:
+    name: Terraform Plan
+    runs-on: ubuntu-latest
+    needs: terraform-scan
+
+    defaults:
+      run:
+        working-directory: environments/preprod
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init -backend=false
+
+      - name: Terraform Plan
+        run: terraform plan -input=false -out=tfplan
