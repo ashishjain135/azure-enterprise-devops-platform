@@ -11,6 +11,8 @@ terraform {
     storage_account_name = "staedptfstate001"
     container_name       = "tfstate"
     key                  = "preprod.tfstate"
+
+    
     use_azuread_auth = true
   }
 }
