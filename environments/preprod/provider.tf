@@ -12,7 +12,7 @@ terraform {
     container_name       = "tfstate"
     key                  = "preprod.tfstate"
 
-    
+
     use_azuread_auth = true
   }
 }
