@@ -35,3 +35,24 @@ terraform.rc
 # Optional: ignore plan files saved before destroying Terraform configuration
 # Uncomment the line below if you want to ignore planout files.
 # planout
+
+
+# Terraform plan files
+*.tfplan
+tfplan
+
+# Terraform generated reports
+*-report.json
+
+# Security and linting reports
+gitleaks-report.json
+tflint-report.json
+tfsec-report.json
+
+# Environment variable files
+.env
+.env.*
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
