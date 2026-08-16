@@ -1,18 +1,18 @@
 rgs = {
   rg1 = {
     name     = "rg-aedp-preprod"
-    location = "centralindia"
+    location = "eastus"
   }
   rg2 = {
     name     = "rg-aedp-preprod-2"
-    location = "centralindia"
+    location = "eastus"
   }
 }
 
 vnets = {
   vnet1 = {
     name                = "vnet-aedp-preprod"
-    location            = "centralindia"
+    location            = "eastus"
     resource_group_name = "rg-aedp-preprod"
     address_space       = ["10.0.0.0/16"]
   }
@@ -55,13 +55,13 @@ public_ips = {
   pip_bastion = {
     public_ip_name      = "pip-aedp-preprod-bastion"
     resource_group_name = "rg-aedp-preprod"
-    location            = "centralindia"
+    location            = "eastus"
     allocation_method   = "Static"
   }
   pip_appgw = {
     public_ip_name      = "pip-aedp-preprod-appgw"
     resource_group_name = "rg-aedp-preprod"
-    location            = "centralindia"
+    location            = "eastus"
     allocation_method   = "Static"
   }
 }
@@ -69,7 +69,7 @@ public_ips = {
 vms = {
   frontend_1 = {
     nic_name        = "frontend-vm-nic-1-dev"
-    location        = "centralindia"
+    location        = "eastus"
     rg_name         = "rg-aedp-preprod"
     nic_subnet_name = "snet-aedp-preprod-frontend"
     nic_vnet_name   = "vnet-aedp-preprod"
@@ -85,7 +85,7 @@ vms = {
   }
   frontend_2 = {
     nic_name        = "frontend-vm-nic-2-dev"
-    location        = "centralindia"
+    location        = "eastus"
     rg_name         = "rg-aedp-preprod"
     nic_subnet_name = "snet-aedp-preprod-frontend"
     nic_vnet_name   = "vnet-aedp-preprod"
@@ -101,7 +101,7 @@ vms = {
   }
   backend_1 = {
     nic_name        = "backend-vm-nic-1-dev"
-    location        = "centralindia"
+    location        = "eastus"
     rg_name         = "rg-aedp-preprod"
     nic_subnet_name = "snet-aedp-preprod-backend"
     nic_vnet_name   = "vnet-aedp-preprod"
@@ -117,7 +117,7 @@ vms = {
   }
   backend_2 = {
     nic_name        = "backend-vm-nic-2-dev"
-    location        = "centralindia"
+    location        = "eastus"
     rg_name         = "rg-aedp-preprod"
     nic_subnet_name = "snet-aedp-preprod-backend"
     nic_vnet_name   = "vnet-aedp-preprod"
@@ -163,7 +163,7 @@ bastions = {
 app_gateways = {
   appgw1 = {
     name           = "agw-aedp-preprod"
-    location       = "centralindia"
+    location       = "eastus"
     rg_name        = "rg-aedp-preprod"
     subnet_name    = "AppGatewaySubnet"
     vnet_name      = "vnet-aedp-preprod"
@@ -174,7 +174,7 @@ app_gateways = {
 load_balancers = {
   lb1 = {
     name        = "lb-aedp-preprod-backend"
-    location    = "centralindia"
+    location    = "eastus"
     rg_name     = "rg-aedp-preprod"
     subnet_name = "snet-aedp-preprod-backend"
     vnet_name   = "vnet-aedp-preprod"
@@ -184,7 +184,7 @@ load_balancers = {
 key_vaults = {
   kv1 = {
     name        = "kv-aedp-preprod-001"
-    location    = "centralindia"
+    location    = "eastus"
     rg_name     = "rg-aedp-preprod"
     secret_name = "admin-password"
   }
