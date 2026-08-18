@@ -7,13 +7,13 @@ terraform {
     }
   }
   backend "azurerm" {
-  use_oidc             = true
-  use_azuread_auth     = true
-  resource_group_name  = "rg-aedp-tfstate"
-  storage_account_name = "staedptfstate001"
-  container_name       = "tfstate"
-  key                  = "preprod.tfstate"
-}
+    use_oidc             = true
+    use_azuread_auth     = true
+    resource_group_name  = "rg-aedp-tfstate"
+    storage_account_name = "staedptfstate001"
+    container_name       = "tfstate"
+    key                  = "preprod.tfstate"
+  }
 }
 
 provider "azurerm" {
